@@ -1,7 +1,8 @@
 # Create bash script to check all packages installed #296
 ```
 #Hello Team! 
-In this project the bash script checks if all the necessary packages are installed in bastion host every time when bastion host reloaded, otherwise all packages where checked manually. If one of the packages is not installed script should fail. 
+In this project the bash script checks if all the necessary packages are installed in bastion host every time when bastion host reloaded, 
+otherwise all packages checked manually. If one of the packages is not installed script should say package_name is not installed. 
 
 To use this script use this link please "https://github.com/stoktobekova/check-packages-with-bash-script.git"
 
