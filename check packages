@@ -1,45 +1,12 @@
-!/bin/bash
+#!/bin/bash
 
-declare -a ListOfPackages=("packer" "terraform" "kubectl" "docker-compose")
-
-
+declare -a ListOfPackages=("packer" "terraform" "kubectl" "docker-compose" "docker" "helm" "python3" "tree" "curl" "wget" "java" "groovy"  "waypoint" "nslookup") 
 for val in ${ListOfPackages[@]}; do
 
-    if $val version >/dev/null; then 
+    if $val -version &> /dev/null || $val --version &> /dev/null || $val version &> /dev/null; then 
         echo "$val is installed"
     else
         echo "$val is not installed"
     fi 
 done
-
-declare -a ListOfPackages=("python3" "tree" "curl" "wget")
-
-
-for val in ${ListOfPackages[@]}; do
-
-    if  $val --version >/dev/null; then 
-        echo "$val is installed"
-    else
-        echo "$val is not installed"
-    fi 
-done
-
-declare -a ListOfPackages=("java" "groovy" "nslookup" "waypoint")
-
-
-for val in ${ListOfPackages[@]}; do
-
-    if $val -version; then 
-        echo "$val is installed"
-    else
-        echo "$val is not installed"
-    fi 
-done
-
-# #!/bin/bash read -p "Package Name: " docker-compose 
-# which $docker-compose > /dev/null 2>&1 
-# if [ $? == 0 ] then echo "$docker-compose is already installed. " 
-#       else 
-# echo "$docker-compose is not installed. "
-# fi 
 
